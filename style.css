@@ -391,7 +391,7 @@ input[type="submit"],
 	background-color: #333;
 	border: 0;
 	border-radius: 3px;
-	color: #fff;
+	color: black;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 400;
@@ -1471,6 +1471,7 @@ p.form-submit,
     border-radius: 0px;
 	height: 70px;
 	width: 300px;
+	text-align: center;
 }
 
 .actionButtonRegularPage{
@@ -1481,6 +1482,7 @@ p.form-submit,
 	height: 55px;
 	width: 250px;
 	font-size: 12px;
+		text-align: center;
 	
 }
 .buttonDiv {
@@ -1568,6 +1570,15 @@ font-family: 'Raleway', sans-serif;
 /**********Style the mailing list form ************/
  .mailChimpClassSubmit {
  	width: 30%;
+ 	background-color: #709bb4;
+ 
+ }
+  input[type="submit"].mailChimpClassSubmit {
+ 		background-color: #709bb4;
+ }
+ 
+ input:hover[type="submit"].mailChimpClassSubmit {
+ 	    background-color: #f5f5f5;
  }
  .mailChimpClassEntry {
  	width: 50%;
@@ -1582,7 +1593,9 @@ font-family: 'Raleway', sans-serif;
  	padding: 40px 30px 0px 20px;
     margin: auto;
  	}
- 	
+ .blogPageSiteInnerClass input {	
+ 	font-size: .8em;
+ }
  .blogContentSidebarWrapClass {
  	width: 100%;
  }
@@ -1604,8 +1617,11 @@ font-family: 'Raleway', sans-serif;
  		font-size: .8em;
  	}
  	.widget-wrap li {
- 		color: red;
+ 		color: #709bb4;
  		padding: .3em;
+ 	}
+ 	.widget-wrap h2 {
+ 		font-size: 1.6em;
  	}
  	
  	/**********styling the paypal **************/

@@ -34,13 +34,13 @@ function frontPageHeading() {
     </div>
     <div class="buttonArea"> <div class="colFull">
  <div class="buttonDivFrontPage">
- 	<button class="actionButton"> <a href='https://janine-live-tolkadot.c9users.io/make-an-appointment/'>Make an Appointment</a></button>
+ 	<a href='https://janine-live-tolkadot.c9users.io/make-an-appointment/'class=" button actionButton"> Make an Appointment</a>
  
  </div></div>
 <div class="colFull">	
   <div class="buttonDivFrontPage">
 
- 	<button class="actionButton"> <a href='https://janine-live-tolkadot.c9users.io/book-a-training-session/'>Book a Training Session</button>
+ 	 <a href='https://janine-live-tolkadot.c9users.io/book-a-training-session/' class=" button actionButton">Book a Training Session</a>
  </div>
 		</div>	
 	</div>

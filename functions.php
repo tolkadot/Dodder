@@ -150,11 +150,11 @@ function addButtonsToOtherPages() {
   
   	?>
  <div class="buttonDiv">
- 	<button class="actionButtonRegularPage"> <a href='https://janine-live-tolkadot.c9users.io/make-an-appointment/'>Make an Appointment</a></button>
+ <a href='https://janine-live-tolkadot.c9users.io/make-an-appointment/' class="actionButtonRegularPage button">Make an Appointment</a>
  </div>
 
   <div class="buttonDiv">
- 	<button class="actionButtonRegularPage"> <a href='https://janine-live-tolkadot.c9users.io/book-a-training-session/'>Book a Training Session</button>
+ 	<a href='https://janine-live-tolkadot.c9users.io/book-a-training-session/' class="actionButtonRegularPage button">Book a Training Session</a>
  </div>
 <?php	
 }
