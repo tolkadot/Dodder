@@ -1,0 +1,70 @@
+
+# BEGIN All In One WP Security
+#AIOWPS_BLOCK_WP_FILE_ACCESS_START
+<Files license.txt>
+order allow,deny
+deny from all
+</files>
+<Files wp-config-sample.php>
+order allow,deny
+deny from all
+</Files>
+# <Files wp-config.php>
+# order allow,deny
+# deny from all
+# </Files>
+<Files readme.html>
+order allow,deny
+deny from all
+</Files>
+#AIOWPS_BLOCK_WP_FILE_ACCESS_END
+#AIOWPS_BLOCK_SPAMBOTS_START
+<IfModule mod_rewrite.c>
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{REQUEST_URI} ^(.*)?wp-comments-post\.php(.*)$
+RewriteCond %{HTTP_REFERER} !^http(s)?s://janine-live-tolkadot\.c9users\.io [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule .* http://127.0.0.1 [L]
+</IfModule>
+#AIOWPS_BLOCK_SPAMBOTS_END
+# END All In One WP Security
+
+#START @tolkadot  
+# Block the include-only files.
+# <IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteBase /
+# RewriteRule ^wp-admin/includes/ - [F,L]
+# RewriteRule !^wp-includes/ - [S=3]
+# RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+# RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+# RewriteRule ^wp-includes/theme-compat/ - [F,L]
+# </IfModule>
+
+<Files php.ini>
+order allow,deny
+deny from all
+</Files>
+
+#Prevent listing of dir structure
+ Options All -Indexes
+
+# <Directory "/home/ubuntu/workspace/wp-content/uploads/">
+# <Files "*.php">
+# Order Deny,Allow
+# Deny from All
+# </Files>
+# </Directory>
+#END @tolkadot #
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
