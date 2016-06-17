@@ -8,12 +8,7 @@ function dodder_body_class( $classes ) {
 	return $classes;
 }
 
-/* Add a class to the blog page site inner body */
-/*this is a function to add classes */
-function dodder_add_class( $attr, $class ) {
-    $attr['class'] .= ' ' . sanitize_html_class( $class );
-    return $attr;
-}
+
 
 add_filter( 'genesis_attr_site-inner', 'dodder_site_inner_class' );
 function dodder_site_inner_class( $attr ) {

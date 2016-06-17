@@ -11,12 +11,12 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
 
 /*****************Adding a custom class to the front-page body for styling******************/
 
-// add_filter( 'body_class', 'dodder_body_class' );
-// function dodder_body_class( $classes ) {
+add_filter( 'body_class', 'dodder_body_class' );
+function dodder_body_class( $classes ) {
 	
-// 	$classes[] = 'regularPageBody';
-// 	return $classes;
-// }
+	$classes[] = 'regularPageBody';
+	return $classes;
+}
 
 
 
@@ -25,15 +25,15 @@ function dodder_site_inner_class( $attr ) {
     return dodder_add_class( $attr, 'regularPageSiteInnerClass' );
 }
 
-add_filter ( 'body_class', 'dodder_regular_page_body_class');
-function dodder_regular_page_body_class( $attr ) {
-return dodder_add_class( $attr, 'regularPageBody' );
-}
+// add_filter ( 'body_class', 'dodder_regular_page_body_class');
+// function dodder_regular_page_body_class( $attr ) {
+// return dodder_add_class( $attr, 'regularPageBody' );
+// }
 
-add_filter( 'genesis_attr_nav-secondary', 'dodder_secondary_nav_class' );
-function dodder_secondary_nav_class( $attr ) {
-    return dodder_add_class( $attr, 'regularPageSecondaryNavClass' );
-}
+// add_filter( 'genesis_attr_nav-secondary', 'dodder_secondary_nav_class' );
+// function dodder_secondary_nav_class( $attr ) {
+//     return dodder_add_class( $attr, 'regularPageSecondaryNavClass' );
+// }
 
 
 if ( is_page( 'janine-mccarthy' ) ) :

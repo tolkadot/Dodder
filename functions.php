@@ -174,21 +174,21 @@ function addGoogleFonts() {
 }
 
 
-function dodder_add_class( $attr, $class ) {
-    $attr['class'] .= ' ' . sanitize_html_class( $class );
+function dodder_add_class( $attr, $hello ) {
+    $attr['class'] .= ' ' . sanitize_html_class( $hello );
     return $attr;
 }
-black sheet;
+
 
 
 
 // Add redirect to prevent disclosing the admin username
-add_action(‘template_redirect’, ‘bwp_template_redirect’);
-function bwp_template_redirect()
-{
-if (is_author())
-{
-wp_redirect( home_url() ); exit;
-}
-}
+// add_action(‘template_redirect’, ‘bwp_template_redirect’);
+// function bwp_template_redirect()
+// {
+// if (is_author())
+// {
+// wp_redirect( home_url() ); exit;
+// }
+// }
 ?>
