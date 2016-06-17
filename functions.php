@@ -13,6 +13,7 @@ function mobile_first_scripts_styles() {
 
 	wp_enqueue_script( 'mobile-first-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_script( 'mobile-first-sticky-message', get_bloginfo( 'stylesheet_directory' ) . '/js/sticky-message.js', array( 'jquery' ), '1.0.0' );
+		wp_enqueue_script( 'facebook', get_bloginfo( 'stylesheet_directory' ) . '/js/facebook.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,400italic,700', array(), CHILD_THEME_VERSION );
@@ -149,6 +150,7 @@ function addButtonsToOtherPages() {
   if ( !is_front_page() ) {
   
   	?>
+ 
  <div class="buttonDiv">
  <a href='https://janine-live-tolkadot.c9users.io/make-an-appointment/' class="actionButtonRegularPage button">Make an Appointment</a>
  </div>
@@ -172,7 +174,11 @@ function addGoogleFonts() {
 }
 
 
-
+function dodder_add_class( $attr, $class ) {
+    $attr['class'] .= ' ' . sanitize_html_class( $class );
+    return $attr;
+}
+black sheet;
 
 
 

@@ -955,9 +955,9 @@ img.alignright,
 --------------------------------------------- */
 
 .nav-secondary {
-	border-bottom: 1px solid #f5f5f5;
+	/*border-bottom: 1px solid #f5f5f5; @tolkadot removed*/
 	padding-bottom: 10px;
-	padding-top: 10px;
+	padding-top: 0px;
 }
 
 /* Responsive Navigation
@@ -1321,7 +1321,8 @@ p.form-submit,
 	}
 
 	.nav-secondary {
-		padding: 10px 5%;
+		padding: 0px 5%; /*tolkadot changed from 10px to 0px */
+		float: left; /*tolkadot added  */
 	}
 
 	.nav-secondary .genesis-nav-menu > li:first-child a {
@@ -1663,6 +1664,12 @@ font-family: 'Raleway', sans-serif;
 		width: 45%;
 		margin: 0 auto 0 auto;
 	}
+	/*make the socail media icons  centered for smaller screens*/
+	 .menu-secondary{
+	 	display: block;
+		text-align: center;
+	}
+	
 	
 }
   
@@ -1759,3 +1766,26 @@ text-align: center;
   	margin: .3em 0;
   }
   }
+  
+  
+  /*Styling the socail media secondary nav for the front page */
+.frontPageSecondaryNavClass {
+  	padding: 0;
+  }
+  .frontPageSecondaryNavClass a{
+  	padding-top: 0;
+  }
+  
+  
+  dodderFrontPageSubNav {
+  	padding: 0px 5%;
+  }
+  
+    /*Styling the socail media secondary nav for the reg page */
+.regularPageSecondaryNavClass a {
+	padding-top: 0;
+}
+
+.regularPageSecondaryNavClass {
+	margin-left: 3.5%;
+}

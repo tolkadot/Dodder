@@ -1,14 +1,15 @@
 jQuery(function( $ ){
 
-	$("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .nav-secondary .genesis-nav-menu").addClass("responsive-menu").before('<div class="responsive-menu-icon"></div>');
+	$(" .nav-primary ").addClass("responsive-menu").before('<div class="responsive-menu-icon"></div>');
+	//@tolkadot rmoved lots of classes from the select part of this function so that the class is only added to the .nav-primary class
 
 	$(".responsive-menu-icon").click(function(){
-		$(this).next("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .nav-secondary .genesis-nav-menu").slideToggle();
+		$(this).next("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .genesis-nav-menu").slideToggle();
 	});
 
 	$(window).resize(function(){
 		if(window.innerWidth > 767) {
-			$("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .nav-secondary .genesis-nav-menu, nav .sub-menu").removeAttr("style");
+			$("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .genesis-nav-menu, nav .sub-menu").removeAttr("style");
 			$(".responsive-menu > .menu-item").removeClass("menu-open");
 		}
 	});
