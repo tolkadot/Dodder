@@ -30,10 +30,10 @@ function dodder_site_inner_class( $attr ) {
 // return dodder_add_class( $attr, 'regularPageBody' );
 // }
 
-// add_filter( 'genesis_attr_nav-secondary', 'dodder_secondary_nav_class' );
-// function dodder_secondary_nav_class( $attr ) {
-//     return dodder_add_class( $attr, 'regularPageSecondaryNavClass' );
-// }
+add_filter( 'genesis_attr_nav-secondary', 'dodder_secondary_nav_class' );
+function dodder_secondary_nav_class( $attr ) {
+    return dodder_add_class( $attr, 'regularPageSecondaryNavClass' );
+}
 
 
 if ( is_page( 'janine-mccarthy' ) ) :

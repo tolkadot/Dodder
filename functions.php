@@ -179,7 +179,11 @@ function dodder_add_class( $attr, $hello ) {
     return $attr;
 }
 
-
+///Favicon///
+add_filter( 'genesis_pre_load_favicon', 'dodder_favicon_filter' );
+function dodder_favicon_filter( $favicon_url ) {
+	return 'https://janine-live-tolkadot.c9users.io/wp-content/themes/Dodder/images/favicon.ico';
+}
 
 
 // Add redirect to prevent disclosing the admin username

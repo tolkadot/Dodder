@@ -35,7 +35,10 @@ add_filter( 'genesis_attr_content-sidebar-wrap', 'dodder_content_sidebar_wrap' )
 function dodder_content_sidebar_wrap( $attr ) {
     return dodder_add_class( $attr, 'blogContentSidebarWrapClass' );
 }
-
+add_filter( 'genesis_attr_nav-secondary', 'dodder_secondary_nav_class' );
+function dodder_secondary_nav_class( $attr ) {
+    return dodder_add_class( $attr, 'regularPageSecondaryNavClass' );
+}
 genesis();
 
 
